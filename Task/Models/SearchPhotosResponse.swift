@@ -12,10 +12,10 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct SearchPhotos : Codable {
+struct SearchPhotosResponse : Codable {
 	let total : Int?
 	let totalPages : Int?
-	let results : [Results]?
+	let results : [Photo]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -28,7 +28,7 @@ struct SearchPhotos : Codable {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		total = try values.decodeIfPresent(Int.self, forKey: .total)
 		totalPages = try values.decodeIfPresent(Int.self, forKey: .totalPages)
-		results = try values.decodeIfPresent([Results].self, forKey: .results)
+		results = try values.decodeIfPresent([Photo].self, forKey: .results)
 	}
 
 }

@@ -12,74 +12,60 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Results : Codable {
+struct Photo : Codable {
 	let id : String?
-	let created_at : String?
-	let updated_at : String?
-	let promoted_at : String?
+	let createdAt : String?
+	let updatedAt : String?
+	let promotedAt : String?
 	let width : Int?
 	let height : Int?
 	let color : String?
-	let blur_hash : String?
+	let blurHash : String?
 	let description : String?
-	let alt_description : String?
+	let altDescription : String?
 	let urls : Urls?
-	let links : Links?
 	let categories : [String]?
 	let likes : Int?
-	let liked_by_user : Bool?
-	let current_user_collections : [String]?
+	let likedByUser : Bool?
 	let sponsorship : String?
-	let topic_submissions : Topic_submissions?
-	let user : User?
-	let tags : [Tags]?
 
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"
-		case created_at = "created_at"
-		case updated_at = "updated_at"
-		case promoted_at = "promoted_at"
+		case createdAt = "created_at"
+		case updatedAt = "updated_at"
+		case promotedAt = "promoted_at"
 		case width = "width"
 		case height = "height"
 		case color = "color"
-		case blur_hash = "blur_hash"
+		case blurHash = "blur_hash"
 		case description = "description"
-		case alt_description = "alt_description"
+		case altDescription = "alt_description"
 		case urls = "urls"
-		case links = "links"
 		case categories = "categories"
 		case likes = "likes"
-		case liked_by_user = "liked_by_user"
-		case current_user_collections = "current_user_collections"
+		case likedByUser = "liked_by_user"
 		case sponsorship = "sponsorship"
-		case topic_submissions = "topic_submissions"
-		case user = "user"
-		case tags = "tags"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
-		created_at = try values.decodeIfPresent(String.self, forKey: .created_at)
-		updated_at = try values.decodeIfPresent(String.self, forKey: .updated_at)
-		promoted_at = try values.decodeIfPresent(String.self, forKey: .promoted_at)
+		createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
+		updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
+		promotedAt = try values.decodeIfPresent(String.self, forKey: .promotedAt)
 		width = try values.decodeIfPresent(Int.self, forKey: .width)
 		height = try values.decodeIfPresent(Int.self, forKey: .height)
 		color = try values.decodeIfPresent(String.self, forKey: .color)
-		blur_hash = try values.decodeIfPresent(String.self, forKey: .blur_hash)
+		blurHash = try values.decodeIfPresent(String.self, forKey: .blurHash)
 		description = try values.decodeIfPresent(String.self, forKey: .description)
-		alt_description = try values.decodeIfPresent(String.self, forKey: .alt_description)
+		altDescription = try values.decodeIfPresent(String.self, forKey: .altDescription)
 		urls = try values.decodeIfPresent(Urls.self, forKey: .urls)
-		links = try values.decodeIfPresent(Links.self, forKey: .links)
 		categories = try values.decodeIfPresent([String].self, forKey: .categories)
 		likes = try values.decodeIfPresent(Int.self, forKey: .likes)
-		liked_by_user = try values.decodeIfPresent(Bool.self, forKey: .liked_by_user)
-		current_user_collections = try values.decodeIfPresent([String].self, forKey: .current_user_collections)
+		likedByUser = try values.decodeIfPresent(Bool.self, forKey: .likedByUser)
+
 		sponsorship = try values.decodeIfPresent(String.self, forKey: .sponsorship)
-		topic_submissions = try values.decodeIfPresent(Topic_submissions.self, forKey: .topic_submissions)
-		user = try values.decodeIfPresent(User.self, forKey: .user)
-		tags = try values.decodeIfPresent([Tags].self, forKey: .tags)
 	}
 
 }

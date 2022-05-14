@@ -16,6 +16,13 @@
 		56C5088028301A1400717FDE /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C5087F28301A1400717FDE /* TaskTests.swift */; };
 		56C5088A28301A1400717FDE /* TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C5088928301A1400717FDE /* TaskUITests.swift */; };
 		56C5088C28301A1400717FDE /* TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C5088B28301A1400717FDE /* TaskUITestsLaunchTests.swift */; };
+		56C5089A2830204200717FDE /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C508992830204200717FDE /* EndPoints.swift */; };
+		56C508AD2830233500717FDE /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C5089E2830233400717FDE /* Results.swift */; };
+		56C508AE2830233500717FDE /* SearchPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C5089F2830233400717FDE /* SearchPhotosResponse.swift */; };
+		56C508B02830233500717FDE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C508A12830233400717FDE /* Category.swift */; };
+		56C508B12830233500717FDE /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C508A22830233400717FDE /* Subcategory.swift */; };
+		56C508B82830233500717FDE /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C508A92830233500717FDE /* Urls.swift */; };
+		56C508BC2830266C00717FDE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C508BB2830266C00717FDE /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		56C5088528301A1400717FDE /* TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C5088928301A1400717FDE /* TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUITests.swift; sourceTree = "<group>"; };
 		56C5088B28301A1400717FDE /* TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		56C508992830204200717FDE /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		56C5089E2830233400717FDE /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		56C5089F2830233400717FDE /* SearchPhotosResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotosResponse.swift; sourceTree = "<group>"; };
+		56C508A12830233400717FDE /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		56C508A22830233400717FDE /* Subcategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
+		56C508A92830233500717FDE /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		56C508BB2830266C00717FDE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,9 @@
 		56C5086728301A1100717FDE /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				56C508BA2830264100717FDE /* Network */,
+				56C5089B2830226B00717FDE /* Models */,
+				56C508982830201100717FDE /* Utility */,
 				56C5086828301A1100717FDE /* AppDelegate.swift */,
 				56C5086A28301A1100717FDE /* SceneDelegate.swift */,
 				56C5086C28301A1100717FDE /* ViewController.swift */,
@@ -125,6 +142,34 @@
 				56C5088B28301A1400717FDE /* TaskUITestsLaunchTests.swift */,
 			);
 			path = TaskUITests;
+			sourceTree = "<group>";
+		};
+		56C508982830201100717FDE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				56C508992830204200717FDE /* EndPoints.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		56C5089B2830226B00717FDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56C508A12830233400717FDE /* Category.swift */,
+				56C5089F2830233400717FDE /* SearchPhotosResponse.swift */,
+				56C5089E2830233400717FDE /* Results.swift */,
+				56C508A22830233400717FDE /* Subcategory.swift */,
+				56C508A92830233500717FDE /* Urls.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56C508BA2830264100717FDE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				56C508BB2830266C00717FDE /* ApiService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +304,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				56C5086D28301A1100717FDE /* ViewController.swift in Sources */,
+				56C508B02830233500717FDE /* Category.swift in Sources */,
+				56C508BC2830266C00717FDE /* ApiService.swift in Sources */,
 				56C5086928301A1100717FDE /* AppDelegate.swift in Sources */,
+				56C508AD2830233500717FDE /* Results.swift in Sources */,
+				56C508B82830233500717FDE /* Urls.swift in Sources */,
+				56C508AE2830233500717FDE /* SearchPhotosResponse.swift in Sources */,
+				56C508B12830233500717FDE /* Subcategory.swift in Sources */,
+				56C5089A2830204200717FDE /* EndPoints.swift in Sources */,
 				56C5086B28301A1100717FDE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +491,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPS2X76N7Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Task/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPS2X76N7Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Task/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
