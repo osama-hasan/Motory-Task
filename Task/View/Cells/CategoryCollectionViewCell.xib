@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="89"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-Zp-sfH">
+                        <rect key="frame" x="4" y="4" width="205" height="81"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QU-4x-GKv">
+                                <rect key="frame" x="85" y="32" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Secondary"/>
+                        <constraints>
+                            <constraint firstItem="3QU-4x-GKv" firstAttribute="centerX" secondItem="Uhs-Zp-sfH" secondAttribute="centerX" id="D6y-kt-fYx"/>
+                            <constraint firstItem="3QU-4x-GKv" firstAttribute="centerY" secondItem="Uhs-Zp-sfH" secondAttribute="centerY" id="j3Z-jp-i1c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Uhs-Zp-sfH" secondAttribute="bottom" constant="4" id="74q-Ee-LAd"/>
+                <constraint firstItem="Uhs-Zp-sfH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="VzC-3H-OKx"/>
+                <constraint firstItem="Uhs-Zp-sfH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="f2W-cP-BeQ"/>
+                <constraint firstAttribute="trailing" secondItem="Uhs-Zp-sfH" secondAttribute="trailing" constant="4" id="vgu-D8-4GQ"/>
+            </constraints>
+            <size key="customSize" width="213" height="89"/>
+            <connections>
+                <outlet property="categoryTitle" destination="3QU-4x-GKv" id="YBJ-9q-QH8"/>
+                <outlet property="cellBackground" destination="Uhs-Zp-sfH" id="YKH-Km-cBm"/>
+            </connections>
+            <point key="canvasLocation" x="255.79710144927537" y="93.415178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Secondary">
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

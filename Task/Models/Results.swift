@@ -27,7 +27,6 @@ struct Photo : Codable {
 	let categories : [String]?
 	let likes : Int?
 	let likedByUser : Bool?
-	let sponsorship : String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -45,7 +44,6 @@ struct Photo : Codable {
 		case categories = "categories"
 		case likes = "likes"
 		case likedByUser = "liked_by_user"
-		case sponsorship = "sponsorship"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -65,7 +63,6 @@ struct Photo : Codable {
 		likes = try values.decodeIfPresent(Int.self, forKey: .likes)
 		likedByUser = try values.decodeIfPresent(Bool.self, forKey: .likedByUser)
 
-		sponsorship = try values.decodeIfPresent(String.self, forKey: .sponsorship)
 	}
 
 }

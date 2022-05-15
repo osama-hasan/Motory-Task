@@ -18,9 +18,14 @@ enum EndPoints:String {
     case search = "search/photos"
 }
 
+enum LayoutType:Int{
+    case list = 1
+    case grid = 2
+}
+
 
 struct HttpCustomHeaders{
-    static var authHeaders = ["Content-Type":"application/json","Authorization":"Bearer" ]
+    static var authHeaders = ["Content-Type":"application/json","Authorization":"Client-ID k7EvWytw8sbrdzxfYEjeqO1Qy6oAMoP28fURRxLGfG4" ]
     static var basicHeaders = ["Content-Type":"application/json"]
    
 }
